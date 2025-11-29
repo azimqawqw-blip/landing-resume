@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YOUR_NAME — Resume / Landing</title>
+  <meta name="description" content="YOUR_NAME — Landing & Telegram bot & AI avtomatlashtirish" />
+  <style>
+    :root{
+      --bg:#0f1720; --card:#0b1220; --accent:#1fb6ff; --text:#e6eef6;
+      --muted:#9fb0c1; --glass: rgba(255,255,255,0.03);
+      font-synthesis: none;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,var(--bg),#07111a 120%); color:var(--text); -webkit-font-smoothing:antialiased;
+      line-height:1.45;
+    }
+    .wrap{max-width:960px;margin:40px auto;padding:24px;}
+    .card{background:var(--card);border-radius:14px;padding:28px;backdrop-filter: blur(6px);box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+    .header{display:flex;gap:20px;align-items:center}
+    .avatar{width:92px;height:92px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#5ef3c6);display:flex;align-items:center;justify-content:center;font-weight:700;color:#042; font-size:34px}
+    h1{margin:0;font-size:26px}
+    p.lead{margin:6px 0 14px;color:var(--muted)}
+    .badges{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+    .badge{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+    .cols{display:grid;grid-template-columns:1fr 320px;gap:22px;margin-top:18px}
+    @media(max-width:880px){.cols{grid-template-columns:1fr;}}
+    .section{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent); padding:14px;border-radius:10px;margin-bottom:12px}
+    h3{margin:0 0 10px;font-size:16px}
+    ul.skills{display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0;margin:0}
+    ul.skills li{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:8px;font-size:13px;color:var(--muted)}
+    .projects .item{padding:10px;border-radius:8px;background:rgba(255,255,255,0.02);margin-bottom:8px}
+    .cta{display:flex;gap:8px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#8be3ff);color:#042}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)}
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+    .socials{display:flex;gap:8px}
+    small.muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="card">
+      <div class="header">
+        <div class="avatar">Y</div>
+        <div>
+          <h1>YOUR_NAME <small style="color:var(--muted);font-weight:600">— YOUR_TITLE</small></h1>
+          <p class="lead">YOUR_BIO. (Misol: Landing & Telegram bot developer. AI orqali sotuvlarni avtomatlashtiraman.)</p>
+          <div class="badges">
+            <span class="badge">Landing</span>
+            <span class="badge">Telegram bot</span>
+            <span class="badge">AI Automation</span>
+            <span class="badge">Web Services</span>
+          </div>
+          <div class="cta" style="margin-top:8px">
+            <button class="btn btn-primary" onclick="openTelegram()">Telegram bilan bog'lan</button>
+            <button class="btn btn-ghost" onclick="copyEmail()">Email nusxa</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cols" style="margin-top:18px">
+        <!-- LEFT: Main -->
+        <div>
+          <div class="section">
+            <h3>🔎 Qisqacha</h3>
+            <p class="muted">Men landing, Telegram bot va AI avtomatlashtirish bo‘yicha xizmat ko‘rsataman. Har doim natija va konvertatsiyaga e'tibor beraman.</p>
+          </div>
+
+          <div class="section">
+            <h3>💼 Tajriba / Loyiha</h3>
+            <div class="projects">
+              <div class="item">
+                <strong>Landing + Bot — Mahsulot sotuv avtomati</strong>
+                <div class="muted">• 3 kun ichida ishga tushirildi • 24/7 to'lov va chat</div>
+              </div>
+              <div class="item">
+                <strong>AI Support Agent</strong>
+                <div class="muted">• Savollarga avtomatik javob • Mijoz oqimini kamaytirish</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3>🛠 Ko‘nikmalar</h3>
+            <ul class="skills">
+              <li>Landing (Tilda / Dorik / HTML)</li>
+              <li>Telegram Bot (Python / BotFather)</li>
+              <li>AI (ChatGPT / API)</li>
+              <li>Design: Canva / Figma</li>
+              <li>Payment integration</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h3>🔗 Portfolio</h3>
+            <p><a href="#" style="color:var(--accent);text-decoration:none">Link to demo landing</a> · <a href="#" style="color:var(--accent);text-decoration:none">Bot demo</a></p>
+          </div>
+        </div>
+
+        <!-- RIGHT: Contact card -->
+        <div>
+          <div class="section">
+            <h3>📫 Aloqa</h3>
+            <p><strong>Telegram:</strong> <span id="tg">@telegram_username</span></p>
+            <p><strong>Email:</strong> <span id="mail">email@example.com</span></p>
+            <p class="muted" style="margin-top:8px;font-size:14px">Ish boshlash uchun: loyiha, maqsad va byudjet yozing — men taklif yuboraman.</p>
+            <div style="margin-top:12px" class="cta">
+              <button class="btn btn-primary" onclick="openTelegram()">Yozish</button>
+              <button class="btn btn-ghost" onclick="window.location='mailto:email@example.com?subject=Ish%20bo%27yicha%20hamkorlik'">Email jo'natish</button>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3>📌 Qisqacha paketlar</h3>
+            <div class="muted">
+              <div style="margin-bottom:8px"><strong>Basic</strong> — One-page landing • 299,000 so'm</div>
+              <div style="margin-bottom:8px"><strong>Standard</strong> — Landing + Bot • 499,000 so'm</div>
+              <div><strong>Premium</strong> — Landing + Bot + AI Agent • 799,000 so'm</div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3>🕒 Ish tartibi</h3>
+            <p class="muted">Onlayn — dunyoning istalgan nuqtasidan ishlayman. To'lov oldindan. 30 kun ichida natija kafolatlanadi.</p>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="socials" style="justify-content:center;margin-bottom:8px">
+          <small class="muted">© YOUR_NAME · Landing & Bot · </small>
+        </div>
+        <small class="muted">Tahrirlash uchun: index.html faylini oching va yuqoridagi ma'lumotlarni o'zgartiring.</small>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    // Replace these values at top of file or edit DOM directly
+    const tgUsername = "telegram_username"; // without @
+    const email = "email@example.com";
+    document.getElementById('tg').innerText = '@' + tgUsername;
+    document.getElementById('mail').innerText = email;
+
+    function openTelegram(){
+      // open web.telegram.org or t.me link
+      const link = tgUsername ? 'https://t.me/' + tgUsername : 'https://t.me/';
+      window.open(link, '_blank');
+    }
+    function copyEmail(){
+      navigator.clipboard?.writeText(email).then(()=>{
+        alert('Email nusxa olindi: ' + email);
+      }).catch(()=>{ alert('Clipboard ga yozib bo‘lmadi. Iltimos qo‘l bilan nusxa oling: ' + email) });
+    }
+  </script>
+</body>
+</html>
